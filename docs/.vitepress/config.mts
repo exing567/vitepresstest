@@ -32,8 +32,6 @@ export default defineConfig({
       {
         text: 'Examples',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
           { text: 'Calculus Unit 5', link: '/calculus5' },
           { text: 'Calculus Unit 6', link: '/calculus6' },
           { text: 'Calculus Unit 7', link: '/calculus7' }

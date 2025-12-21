@@ -33,9 +33,9 @@ export default defineConfig({
         text: 'Examples',
         items: [
           { text: 'Calculus4', link: '/APCalulus/calculus4' },
-          { text: 'Calculus Unit 5', link: '/APCalulus/calculus5' },
-          { text: 'Calculus Unit 6', link: '/APCalulus/calculus6' },
-          { text: 'Calculus Unit 7', link: '/APCalulus/calculus7' }
+          { text: 'Calculus Unit 5', link: '/APCalculus/calculus5' },
+          { text: 'Calculus Unit 6', link: '/APCalculus/calculus6' },
+          { text: 'Calculus Unit 7', link: '/APCalculus/calculus7' }
         ]
       },
       {

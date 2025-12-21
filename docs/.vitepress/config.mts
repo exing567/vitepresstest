@@ -36,9 +36,37 @@ export default defineConfig({
           { text: 'Calculus Unit 6', link: '/calculus6' },
           { text: 'Calculus Unit 7', link: '/calculus7' }
         ]
+      },
+      {
+        text: 'History',
+        items: [
+          // History Unit1
+          {
+            text: 'Unit 1',
+            items: [
+              { text: 'Note 1: 古代文明起源', link: '/history/unit1/note1' },
+              { text: 'Note 2: 早期城邦制度', link: '/history/unit1/note2' }
+            ]
+          },
+          // History Unit2
+          {
+            text: 'Unit 2',
+            items: [
+              { text: 'Note 1: 帝国扩张与贸易', link: '/history/unit2/note1' },
+              { text: 'Note 2: 宗教与文化传播', link: '/history/unit2/note2' }
+            ]
+          },
+          // History Unit3
+          {
+            text: 'Unit 3',
+            items: [
+              { text: 'Note 1: 封建制度形成', link: '/history/unit3/note1' },
+              { text: 'Note 2: 中世纪经济变革', link: '/history/unit3/note2' }
+            ]
+          }
+        ]
       }
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/exing567/ericsnotes' }
     ]

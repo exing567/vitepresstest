@@ -1,44 +1,44 @@
-import { defineConfig } from 'vitepress'
-import mathjax from 'markdown-it-mathjax3'
+import { defineConfig } from "vitepress"
 
+// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Eric's Notes",
   description: "A academic notes website",
 
+  // 新增+修改：markdown 配置（含 MathJax 绘图扩展）
   markdown: {
-    lineNumbers: true,
-    extendMarkdown: (md) => {
-      // 核心修正：直接调用 mathjax 函数，而非 md.use(mathjax3, { ... })
-      md.use(mathjax, {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']],
-          processEscapes: true
-        },
-        svg: {
-          fontCache: 'global'
+    lineNumbers: true, // 代码块显示行号
+    math: {
+      mathjax: {
+        options: {
+          tex: {
+            packages: {'[+]': ['jsgraph']} // 开启函数绘图扩展（核心配置）
+          }
         }
-      })
+      }
     },
-    linkify: true,
-    toc: { level: [1, 2, 3] }
+    linkify: true, // 自动识别链接并转成可点击形式
+    toc: { level: [1, 2, 3] } // 目录层级
   },
 
   themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' }
     ],
+
     sidebar: [
       {
         text: 'Examples',
         items: [
-          { text: 'calculus unit 5', link: '/calculus5' },
-          { text: 'calculus unit 6', link: '/calculus6' },
-          { text: 'calculus unit 7', link: '/calculus7' }
+          { text: 'Calculus Unit 5', link: '/calculus5' },
+          { text: 'Calculus Unit 6', link: '/calculus6' },
+          { text: 'Calculus Unit 7', link: '/calculus7' }
         ]
       }
     ],
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/exing567/ericsnotes' }
     ]

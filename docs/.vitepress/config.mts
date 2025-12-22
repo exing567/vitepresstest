@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress"
+import { pagefindPlugin } from "vitepress-plugin-pagefind"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -21,11 +22,23 @@ export default defineConfig({
     toc: { level: [1, 2, 3] } // 目录层级
   },
 
+  vite: {
+    plugins: [
+      pagefindPlugin({
+        // pagefind options
+        btnPlaceholder: 'Search notes...', // 自定义搜索框占位符
+        placeholder: 'Loading...', // 自定义加载索引时的提示
+        chineseSearchOptimize: true, // 启用中文搜索支持
+        outputDir: './.vitepress/public/pagefind' // 索引文件输出目录
+      })
+    ]
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/hello' }
+      { text: 'Get Start', link: '/hello' }
     ],
 
     sidebar: [

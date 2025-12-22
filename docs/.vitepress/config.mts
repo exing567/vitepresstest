@@ -25,14 +25,14 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/hello' }
     ],
 
     sidebar: [
       {
         text: 'Examples',
         items: [
-          { text: 'Calculus4', link: '/APCalulus/calculus4' },
+          { text: 'Calculus Unit 4', link: '/APCalculus/calculus4' },
           { text: 'Calculus Unit 5', link: '/APCalculus/calculus5' },
           { text: 'Calculus Unit 6', link: '/APCalculus/calculus6' },
           { text: 'Calculus Unit 7', link: '/APCalculus/calculus7' }

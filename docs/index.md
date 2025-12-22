@@ -15,7 +15,7 @@ hero:
   actions:
     - theme: brand  # 主按钮
       text: 浏览笔记目录
-      link: /markdown-examples  # 假设笔记目录放在 /notes 路径下
+      link: /hello  # 假设笔记目录放在 /notes 路径下
     - theme: alt  # 次要按钮
       text: 搜索笔记
       link: /search/  # 假设搜索页路径

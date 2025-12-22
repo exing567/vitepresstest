@@ -9,16 +9,15 @@
 - [ ] 上传其他文件
   - [ ] 语文？
   - [ ] 英语？
-  - [ ] 测试md文件
   - [ ] Vitepress部署教程（小白版）
 - [x] 修复VitePress部署的CF Pages路径问题
 - [x] 给Markdown文件添加待办事项样式
 - [x] 验证本地VitePress构建是否正常
 - [ ] 加入函数演示渲染
-- [ ] 开发搜索页功能/或插件
+- [x] 开发搜索页功能/或插件
 
 ## 联系方式
 [Email](mailto:exing567@outlook.com)
 
 > [!TIP]
-> gugugaga!!!
+> 建议和ChatGPT一起部署网站，能帮你很多！

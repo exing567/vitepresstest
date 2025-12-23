@@ -22,11 +22,29 @@ const results = ref<any[]>([])
 let pagefind: any = null
 
 async function ensurePagefind() {
-  if (!pagefind) {
-    pagefind = await import('/pagefind/pagefind.js')
-    await pagefind.init()
+  if (pagefind) return pagefind
+
+  // 从静态资源加载 pagefind.js（构建器不会解析）
+  const res = await fetch('/pagefind/pagefind.js')
+  if (!res.ok) {
+    throw new Error(`Failed to load /pagefind/pagefind.js: ${res.status}`)
   }
+
+  const code = await res.text()
+
+  // 执行脚本，把 pagefind 挂到全局
+  // eslint-disable-next-line no-new-func
+  new Function(code)()
+
+  pagefind = (globalThis as any).pagefind
+  if (!pagefind) {
+    throw new Error('pagefind not found on globalThis')
+  }
+
+  await pagefind.init()
+  return pagefind
 }
+
 
 async function onSearch() {
   if (!query.value.trim()) {

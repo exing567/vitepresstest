@@ -7,7 +7,6 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'nav-bar-content-after': () => h(PagefindSearch),
-      'nav-bar-title-after': () => h('span', { style: 'margin-left:8px;color:red;font-weight:700' }, 'TEST')
     })
   }
 }

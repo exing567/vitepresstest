@@ -13,3 +13,7 @@ docs/.vitepress/dist/
 # 操作系统缓存
 .DS_Store
 Thumbs.db
+# Pagefind 索引文件
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/public/pagefind/

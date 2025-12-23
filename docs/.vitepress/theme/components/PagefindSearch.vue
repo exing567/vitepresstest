@@ -1,3 +1,5 @@
+<!-- unused: kept for future pagefind UI -->
+
 <template>
   <div class="pf-search">
     <input
